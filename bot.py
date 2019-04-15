@@ -5,7 +5,7 @@ colorama.init()
 config = configparser.ConfigParser()
 config.read('settings.ini')
 
-def login():
+def main():
 	username = config.get('Credentials', 'Username')
 	password = config.get('Credentials', 'Password')
 	client_id = config.get('Credentials', 'Client_ID')
@@ -28,6 +28,14 @@ def login():
 		print(colored("ERROR: Invalid credentials! Please check settings.ini!", 'red'))
 		os.system("pause>nul")
 		sys.exit()
+def exec(client):
+	subreddit = client.subreddit('CrackWatch')
+	for submission in subreddit.stream.submissions():
+		print(submission.title)
+		
 
-
-client = login()
+		
+	
+client = main()
+while True:
+	exec(client)
