@@ -1,5 +1,7 @@
 import praw, configparser, os, sys, time
 from termcolor import colored
+import colorama
+colorama.init()
 config = configparser.ConfigParser()
 config.read('settings.ini')
 
