@@ -18,7 +18,7 @@ def login():
 			password = password,
 			client_id = client_id,
 			client_secret = client_secret,
-			user_agent = "u/Raddcircles2's bot improved by u/SilentHammer"
+			user_agent = "crackwatch reddit bot"
 		)
 		print(colored("SUCCESS: Logged in as u/{}!".format(username), 'green'))
 		return client
@@ -29,5 +29,3 @@ def login():
 
 
 client = login()
-while True:
-	
